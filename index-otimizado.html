@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Natureza Viva - Otimizada</title>
+    
+    <!-- CSS crítico inline -->
+    <style>
+        /* CSS crítico para renderização inicial */
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:Arial,sans-serif;line-height:1.6}
+        .hero{position:relative;height:100vh;overflow:hidden}
+        .hero-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#fff;z-index:2;width:90%}
+        .hero-content h1{font-size:clamp(2rem,5vw,4rem);margin-bottom:1rem;text-shadow:2px 2px 4px rgba(0,0,0,.5)}
+        .hero-content p{font-size:clamp(1rem,2vw,1.5rem)}
+        .gallery{padding:5rem 2rem;background:#f9f9f9}
+        .gallery h2{text-align:center;font-size:clamp(2rem,4vw,2.5rem);margin-bottom:3rem;color:#2c3e50}
+        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;max-width:1400px;margin:0 auto}
+    </style>
+    
+    <!-- CSS não crítico carregado com media print (será aplicado após carregar) -->
+    <link rel="stylesheet" href="css/styles.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/styles.min.css"></noscript>
+    
+    <!-- Pré-conexão para recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonte otimizada -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+<body>
+    <!-- Hero Section com imagem WebP -->
+    <section class="hero">
+        <picture>
+            <source srcset="images/noronha.webp" type="image/webp">
+            <source srcset="images/noronha.jpg" type="image/jpeg">
+            <img src="images/noronha.jpg" alt="Paisagem natural" class="hero-image" loading="eager" width="1920" height="1080">
+        </picture>
+        <div class="hero-content">
+            <h1>Galeria Natureza Viva</h1>
+            <p>Explore as mais belas paisagens do mundo</p>
+        </div>
+    </section>
+
+    <!-- Galeria com lazy loading e WebP -->
+    <section class="gallery">
+        <h2>Nossa Galeria</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <picture>
+                    <source srcset="images/floresta-amazonica.webp" type="image/webp">
+                    <img src="images/floresta-amazonica.jpg" alt="Floresta Amazônica" loading="lazy" width="400" height="300">
+                </picture>
+                <div class="overlay">
+                    <h3>Floresta Amazônica</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <picture>
+                    <source srcset="images/cachoreias.webp" type="image/webp">
+                    <img src="images/cachoreias.jpg" alt="Cachoeiras" loading="lazy" width="400" height="300">
+                </picture>
+                <div class="overlay">
+                    <h3>Cachoeiras</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <picture>
+                    <source srcset="images/montanhas.webp" type="image/webp">
+                    <img src="images/montanhas.jpg" alt="Montanhas" loading="lazy" width="400" height="300">
+                </picture>
+                <div class="overlay">
+                    <h3>Montanhas</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <picture>
+                    <source srcset="images/campos.webp" type="image/webp">
+                    <img src="images/campos.webp" alt="Campos Floridos" loading="lazy" width="400" height="300">
+                </picture>
+                <div class="overlay">
+                    <h3>Campos Floridos</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <picture>
+                    <source srcset="images/praia.webp" type="image/webp">
+                    <img src="images/praia.jpg" alt="Praias Paradisíacas" loading="lazy" width="400" height="300">
+                </picture>
+                <div class="overlay">
+                    <h3>Praias Paradisíacas</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <picture>
+                    <source srcset="images/deserto.webp" type="image/webp">
+                    <img src="images/deserto.jpg" alt="Deserto" loading="lazy" width="400" height="300">
+                </picture>
+                <div class="overlay">
+                    <h3>Desertos</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript otimizado e assíncrono -->
+    <script src="js/main.min.js" defer></script>
+    
+    <!-- Script inline mínimo -->
+    <script>
+        // Registra performance para análise
+        window.addEventListener('load', function() {
+            if (window.performance) {
+                const perfData = window.performance.timing;
+                const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+                console.log(`Página carregada em ${pageLoadTime}ms`);
+            }
+        });
+    </script>
+</body>
+</html>

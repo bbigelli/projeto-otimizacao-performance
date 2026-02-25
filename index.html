@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Natureza Viva</title>
+    
+    <!-- CSS não minificado e com bibliotecas pesadas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- JavaScript bloqueante no head -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Hero Section com imagem pesada -->
+    <section class="hero">
+        <img src="images/noronha.jpg" alt="Paisagem natural" class="hero-image">
+        <div class="hero-content">
+            <h1>Galeria Natureza Viva</h1>
+            <p>Explore as mais belas paisagens do mundo</p>
+        </div>
+    </section>
+
+    <!-- Galeria de imagens sem lazy loading -->
+    <section class="gallery">
+        <h2>Nossa Galeria</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/floresta-amazonica.jpg" alt="Floresta Amazônica">
+                <div class="overlay">
+                    <h3>Floresta Amazônica</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cachoreias.jpg" alt="Cachoeiras">
+                <div class="overlay">
+                    <h3>Cachoeiras</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/montanhas.jpg" alt="Montanhas">
+                <div class="overlay">
+                    <h3>Montanhas</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/campos.jpeg" alt="Campos">
+                <div class="overlay">
+                    <h3>Campos Floridos</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/praia.jpg" alt="Praias">
+                <div class="overlay">
+                    <h3>Praias Paradisíacas</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/deserto.jpg" alt="Deserto">
+                <div class="overlay">
+                    <h3>Desertos</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção com código desnecessário -->
+    <section class="stats">
+        <div class="stat-item">
+            <i class="fas fa-camera fa-3x"></i>
+            <span class="stat-number" id="photos">0</span>
+            <span>Fotos</span>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-users fa-3x"></i>
+            <span class="stat-number" id="visitors">0</span>
+            <span>Visitantes</span>
+        </div>
+        <div class="stat-item">
+            <i class="fas fa-heart fa-3x"></i>
+            <span class="stat-number" id="likes">0</span>
+            <span>Curtidas</span>
+        </div>
+    </section>
+
+    <!-- JavaScript não utilizado e pesado -->
+    <script src="js/main.js"></script>
+    <script>
+        // Código desnecessário e pesado
+        $(document).ready(function() {
+            // Animação desnecessária
+            $('.gallery-item').hover(
+                function() { $(this).find('.overlay').fadeIn(); },
+                function() { $(this).find('.overlay').fadeOut(); }
+            );
+            
+            // Código não utilizado
+            var unusedArray = [];
+            for(var i = 0; i < 10000; i++) {
+                unusedArray.push({id: i, value: 'teste' + i});
+            }
+            
+            // Função nunca chamada
+            function calcularMedia() {
+                var numeros = [1,2,3,4,5];
+                return numeros.reduce((a,b) => a + b) / numeros.length;
+            }
+        });
+    </script>
+</body>
+</html>

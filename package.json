@@ -1,0 +1,22 @@
+{
+  "name": "projeto-otimizacao",
+  "version": "1.0.0",
+  "description": "Projeto para otimização de performance web",
+  "main": "index.html",
+  "scripts": {
+    "optimize-images": "node scripts/optimize-images.js",
+    "minify-css": "npx cssnano css/styles.css css/styles.min.css",
+    "minify-js": "npx terser js/main.js -o js/main.min.js -c -m",
+    "minify-html": "npx html-minifier index.html -o index.min.html --collapse-whitespace --remove-comments",
+    "build": "npm run optimize-images && npm run minify-css && npm run minify-js",
+    "build-all": "npm run build && npm run minify-html"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.0",
+    "cssnano-cli": "^1.0.5",
+    "terser": "^5.24.0",
+    "html-minifier": "^4.0.0"
+  },
+  "author": "Seu Nome",
+  "license": "MIT"
+}
